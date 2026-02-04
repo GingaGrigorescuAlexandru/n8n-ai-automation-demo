@@ -1,2 +1,4 @@
 fourth test
 fourth test2
+
+Chat gpt, vezi oare acest mesaj? Te rog sa imi spui daca poti citii asta in raspunsul tau de pe n8n? Pentru  ca in prezent este o componenta a workflowului meu din n8n!
