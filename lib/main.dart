@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
     'Sketch a tiny UI: one screen, one purpose.',
     'Rename one variable to make it obvious.',
     'Add a friendly empty state message.',
-    'Polish a button: color, radius, and spacing.',
+    'Polish a button: color, rad12312ius, and spacing.',
     'Ship a small improvement, then ',
   ];
   String _spark = 'Tap for a tiny idea.';
