@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -56,6 +58,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  final Random _random = Random();
+  final List<String> _sparks = const [
+    'Sketch a tiny UI: one screen, one purpose.',
+    'Rename one variable to make it obvious.',
+    'Add a friendly empty state message.',
+    'Polish a button: color, radius, and spacing.',
+    'Ship a small improvement, then walk away.',
+  ];
+  String _spark = 'Tap for a tiny idea.';
+
+  @override
+  void initState() {
+    super.initState();
+    _nextSpark();
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -65,6 +82,12 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+    });
+  }
+
+  void _nextSpark() {
+    setState(() {
+      _spark = _sparks[_random.nextInt(_sparks.length)];
     });
   }
 
@@ -111,6 +134,38 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            const SizedBox(height: 24),
+            Card(
+              elevation: 0,
+              color: Theme.of(context).colorScheme.surfaceVariant,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      'Tiny Spark',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                    const SizedBox(height: 8),
+                    AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 250),
+                      child: Text(
+                        _spark,
+                        key: ValueKey(_spark),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    TextButton.icon(
+                      onPressed: _nextSpark,
+                      icon: const Icon(Icons.shuffle),
+                      label: const Text('New spark'),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
