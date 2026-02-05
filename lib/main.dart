@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
     'Rename one variable to make it obvious.',
     'Add a friendly empty state messdfdfthtrzfdsfdsfdsfage.',
     'Polish a button: color, rad12312ius, and spacing.',
-    'Ship a small improvement, then BEBUS',
+    'Ship a small improvement, then BEBUS2',
   ];
   String _spark = 'Tap for a tiny idea.';
 
