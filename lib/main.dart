@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
     'Rename one variable to make it obvious.',
     'Add a friendly empty state message.',
     'Polish a button: color, radius, and spacing.',
-    'Ship a small improvement, then walk away.',
+    'Ship a small improvement, then wal',
   ];
   String _spark = 'Tap for a tiny idea.';
 
@@ -140,7 +140,8 @@ class _MyHomePageState extends State<MyHomePage> {
               elevation: 0,
               color: Theme.of(context).colorScheme.surfaceVariant,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
