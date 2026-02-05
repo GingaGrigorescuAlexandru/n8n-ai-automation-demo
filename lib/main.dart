@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<String> _sparks = const [
     'Sketch a tiny UI: one screen, one purpose.',
     'Rename one variable to make it obvious.',
-    'Add a friendly empty state messzfdsfdsfdsfage.',
+    'Add a friendly empty state messdfdfthtrzfdsfdsfdsfage.',
     'Polish a button: color, rad12312ius, and spacing.',
     'Ship a small improvement, then ',
   ];
